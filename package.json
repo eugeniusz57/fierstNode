@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  },
+  "name": "fierstnode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeniusz57/fierstNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugeniusz57/fierstNode/issues"
+  },
+  "homepage": "https://github.com/eugeniusz57/fierstNode#readme",
+  "description": "",
+  "type": "module"
+}
