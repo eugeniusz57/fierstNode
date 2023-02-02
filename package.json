@@ -6,7 +6,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start: dev": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -15,10 +17,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDepencies":{
+    "nodemon": "^2.0.12"
+  },
   "bugs": {
     "url": "https://github.com/eugeniusz57/fierstNode/issues"
   },
   "homepage": "https://github.com/eugeniusz57/fierstNode#readme",
-  "description": "",
-  "type": "module"
+  "description": ""
+  
 }
