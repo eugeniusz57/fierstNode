@@ -17,13 +17,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDepencies":{
+  "devDepencies": {
     "nodemon": "^2.0.12"
   },
   "bugs": {
     "url": "https://github.com/eugeniusz57/fierstNode/issues"
   },
   "homepage": "https://github.com/eugeniusz57/fierstNode#readme",
-  "description": ""
-  
+  "description": "",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "uuid": "^9.0.0"
+  }
 }

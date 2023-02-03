@@ -41,10 +41,25 @@ const invokeAction = async ({ action, id, data }) => {
       const products = await productsOperation.getAll();
       console.log(products);
       break;
-
-    default:
+    case "getById":
+      const product = await productsOperation.getById(id);
+      console.log("product getById = ", product);
+      if (!product) {
+        throw new Error(`product with id={id} not found`);
+      }
+    case "add":
+      const newProduct = await productsOperation.add(data);
+      console.log(newProduct);
       break;
+    default:
+      console.log("Unknow action");
   }
 };
 
-invokeAction({ action: "getAll" });
+// const id = "124";
+const newData = {
+  name: "Iphon",
+  price: 7.5,
+  location: "USA",
+};
+invokeAction({ action: "getById", id: "124" });
