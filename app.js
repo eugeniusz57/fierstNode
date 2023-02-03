@@ -29,6 +29,8 @@
 // //   .catch((error) => console.error(error.message));
 
 ///////////////////// JSON  /////////////////////
+
+const { program } = require("commander");
 const productsOperation = require("./products");
 
 // 1. Allproducts - productsOperation.getAll
@@ -82,4 +84,14 @@ const newData = {
 
 // invokeAction({ action: "updateById", id: updateId, data: updateData });
 
-invokeAction({ action: "removeById", id: "1" });
+invokeAction({ action: "removeById", id: 1 });
+
+program
+  .option("-a, --action <type>", "product operation")
+  .option("-i, --id<type>", "product id")
+  .option("-n, --name<>", "product name");
+
+program.parse(process.argv);
+
+const options = program.opts();
+console.log(options);
