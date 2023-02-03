@@ -51,6 +51,16 @@ const invokeAction = async ({ action, id, data }) => {
       const newProduct = await productsOperation.add(data);
       console.log(newProduct);
       break;
+    case "updateById":
+      const updateProduct = await productsOperation.updateById(id, data);
+      if (!updateProduct) {
+        throw new Error(`Product with id={id} not found`);
+      }
+      break;
+    case "removeById":
+      const removeProduct = await productsOperation.removeById(id);
+      console.log(removeProduct);
+      break;
     default:
       console.log("Unknow action");
   }
@@ -62,4 +72,14 @@ const newData = {
   price: 7.5,
   location: "USA",
 };
-invokeAction({ action: "getById", id: "124" });
+// invokeAction({ action: "getById", id: "124" });
+// const updateId = "124kg";
+// const updateData = {
+//   name: "Iphon",
+//   price: 6.5,
+//   location: "USA",
+// };
+
+// invokeAction({ action: "updateById", id: updateId, data: updateData });
+
+invokeAction({ action: "removeById", id: "1" });

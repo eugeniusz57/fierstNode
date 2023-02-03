@@ -26,6 +26,7 @@
   "homepage": "https://github.com/eugeniusz57/fierstNode#readme",
   "description": "",
   "dependencies": {
+    "commander": "^10.0.0",
     "nodemon": "^2.0.20",
     "uuid": "^9.0.0"
   }
