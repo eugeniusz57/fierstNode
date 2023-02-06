@@ -49,6 +49,7 @@ const invokeAction = async ({ action, id, data }) => {
       if (!product) {
         throw new Error(`product with id={id} not found`);
       }
+      break;
     case "add":
       const newProduct = await productsOperation.add(data);
       console.log(newProduct);
@@ -84,14 +85,14 @@ const newData = {
 
 // invokeAction({ action: "updateById", id: updateId, data: updateData });
 
-invokeAction({ action: "removeById", id: 1 });
+invokeAction({ action: "getById", id: 1 });
 
-program
-  .option("-a, --action <type>", "product operation")
-  .option("-i, --id<type>", "product id")
-  .option("-n, --name<>", "product name");
+// program
+//   .option("-a, --action <type>", "product operation")
+//   .option("-i, --id<type>", "product id")
+//   .option("-n, --name<>", "product name");
 
-program.parse(process.argv);
+// program.parse(process.argv);
 
-const options = program.opts();
-console.log(options);
+// const options = program.opts();
+// console.log(options);

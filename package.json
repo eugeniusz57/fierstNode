@@ -7,8 +7,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "start: dev": "nodemon app"
+    "start": "node app2.js",
+    "start: dev": "nodemon app2"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "description": "",
   "dependencies": {
     "commander": "^10.0.0",
+    "express": "^4.18.2",
     "nodemon": "^2.0.20",
     "uuid": "^9.0.0"
   }
